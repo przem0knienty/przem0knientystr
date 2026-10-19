@@ -10,6 +10,11 @@
         <input type="text" id="surname" name="surname" required />
         </p>
         <p>
+        <label for="gender">Płeć:</label>
+        <input type="radio" name="gender" value="M" required /><label>Mężczyzna</label>
+        <input type="radio" name="gender" value="F" required /><label>Kobieta</label>
+        </p>
+        <p>
         <label for="street">Ulica:</label>
         <input type="text" id="street" name="street" required />
         </p>
@@ -31,7 +36,24 @@
         </p>
         <p>
         <label for="voievoidship">Województwo:</label>
-        <input type="text" id="voievoidship" name="voievoidship" required />
+        <select name="wojewdztwo" required>
+                    <option value="dolnoslaskie">Dolnośląskie</option>
+                    <option value="kujawsko-pomorskie">Kujawsko-pomorskie</option>
+                    <option value="lubelskie">Lubelskie</option>
+                    <option value="lubuskie">Lubuskie</option>
+                    <option value="lodzkie">Łódzkie</option>
+                    <option value="malopolskie">Małopolskie</option>
+                    <option value="mazowieckie">Mazowieckie</option>
+                    <option value="opolskie">Opolskie</option>
+                    <option value="podkarpackie">Podkarpackie</option>
+                    <option value="podlaskie">Podlaskie</option>
+                    <option value="pomorskie">Pomorskie</option>
+                    <option value="slaskie">Śląskie</option>
+                    <option value="swietokrzyskie">Świętokrzyskie</option>
+                    <option value="warminsko-mazurskie">Warmińsko-mazurskie</option>
+                    <option value="wielkopolskie">Wielkopolskie</option>
+                    <option value="zachodniopomorskie">Zachodniopomorskie</option>
+                </select>
         </p>
         <p>
         <label for="dlicence">Prawo jazdy:</label>
