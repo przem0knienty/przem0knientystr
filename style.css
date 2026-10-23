@@ -1,0 +1,46 @@
+.centruj {
+    text-align: center;
+}
+.tytulowa{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.ramka{
+    display: inline-block;
+    border: 2px solid greenyellow;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(0, 255, 200);
+    border-radius: 4px;
+    font-weight: bold;
+    font-style: italic;
+    
+}
+.fleks{
+    flex: 2;
+    justify-content: center;
+    padding: auto;
+}
+.flekscienki{
+    flex: 1;
+    justify-content: center;
+    padding: auto;
+}
+.kontenerfleks{
+    display: flex;
+    gap: 25px;
+}
+.centrujijustuj{
+
+    text-align: center;
+    justify-self: auto;
+}
+.boks{
+    aspect-ratio: 1/1;
+    width:50%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
