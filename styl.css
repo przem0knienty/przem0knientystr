@@ -1,0 +1,141 @@
+:root {
+  --tlo: #e8eef2;
+  --papier: #ffffff;
+  --tekst: #1f2a33;
+  --akcent: #2a6f97;
+  --ramka: #b9c7d1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--tlo);
+  color: var(--tekst);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+/* menu z odnośnikami do wszystkich stron */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: var(--akcent);
+}
+
+nav a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover { background: rgba(255, 255, 255, 0.2); }
+nav a.aktywna { background: #fff; color: var(--akcent); }
+nav a:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+.strona {
+  max-width: 760px;
+  margin: 28px auto;
+  padding: 32px 36px;
+  background: var(--papier);
+  border: 2px solid var(--ramka);
+  border-radius: 4px;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-size: 1.7rem;
+  color: var(--akcent);
+}
+
+/* --- formularz --- */
+.pole {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 9px 14px;
+  border: 2px solid var(--ramka);
+  border-radius: 999px;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 3px solid var(--akcent);
+  outline-offset: 2px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--akcent);
+}
+
+.radio-grupa { display: flex; flex-wrap: wrap; gap: 16px; }
+.radio-grupa label { display: flex; align-items: center; gap: 6px; }
+
+button {
+  margin-top: 8px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--akcent);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { background: #1f5676; }
+
+/* --- strony z tekstem --- */
+.tekst p { margin: 0 0 14px; text-align: justify; }
+
+.kolumny {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.kolumny.trzy { grid-template-columns: repeat(3, 1fr); font-size: 0.9rem; }
+
+/* --- galeria 3x3 --- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+figure { margin: 0; }
+
+figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 2px solid var(--ramka);
+  border-radius: 4px;
+}
+
+figcaption { margin-top: 6px; font-size: 0.85rem; text-align: center; }
+
+@media (max-width: 600px) {
+  .strona { margin: 14px; padding: 22px 18px; }
+  .pole { grid-template-columns: 1fr; gap: 6px; }
+  .kolumny, .kolumny.trzy { grid-template-columns: 1fr; }
+}
