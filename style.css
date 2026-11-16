@@ -1,5 +1,5 @@
 body {
-  background: darkolivegreen;
+    background: darkolivegreen;
 }
 .centruj {
     text-align: center;
@@ -21,8 +21,9 @@ body {
     background: white;
 }
 .ramka:hover{
-    background: yellow;
+    background: rgb(1, 54, 28);
     transform: scale(1.5);
+    color: white;
 }
 .fleks{
     flex: 2;
@@ -51,20 +52,18 @@ body {
     background-position: center;
 }
 .box {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-
-  
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;  
 }
 
 .strona {
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 35px 40px;
-  border-radius: 5px;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 35px 40px;
+    border-radius: 5px;
   
 }
 .radio { 
@@ -73,24 +72,43 @@ body {
     gap: 20px; 
 }
 .submity{
-    width: 100%;
+    width: 20%;
     padding: 12px;
     background: #6366f1;
     color: white;
-    border-radius: 8px;
+    border-radius: 5px;
     margin-top: 10px;
+    margin-left: 80%;
 }
-input[type="submit"]{
-    font-family: 'Dancing Script',cursive;
-    width:20%;
+button[type="submit"]{
+    font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", "Dancing Script", cursive;
+    width:100%;
+    text-align: center;
+}
+input{
+    border-radius: 5px;
+}
+select{
+    border-radius: 5px;
+}
+input[id="notes"]{
+    height: 130px;
+    text-align: start;
+}
+textarea {
+  height: 120px;
+  padding: 10px;     
+  border-radius: 5px;
+  font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", "Dancing Script", cursive;
+  resize: none;
 }
 .formula{
     background: #6366f1;
     width: 100%;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: bold;
     color: antiquewhite;
-    font-family: 'Dancing Script',cursive;
+    font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", "Dancing Script", cursive;
     
 }
