@@ -15,14 +15,18 @@
             <a class="ramka" href="strona1.html">AI</a> 
         </p>
     </nav>
-    <form class="strona" action="/konto" method="post" onsubmit="window.location.href='pg4.html';return false;">
+    <form class="strona" action="/konto" method="post" 
+    onsubmit="if(document.getElementById('password').value !== document.getElementById('password2').value) {alert('Hasła mają być takie same');return false}">
+        <div class="formula">
         <p class="box">
         <label for="name">Imię:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" 
+        pattern="[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]{3,}" title="Wpisz tylko litery (3 lub więcej)" required />
         </p>
         <p class="box">
         <label for="surname">Nazwisko:</label>
-        <input type="text" id="surname" name="surname" required />
+        <input type="text" id="surname" name="surname" 
+        pattern="^[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]{2,}(-[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśź]{2,})?$" title="Niepoprawny format (muszą być przynajmniej 2 litery w każdym członie nazwiska)" required />
         </p>
         <div class="box">
             <span>Płeć:</span>
@@ -33,7 +37,12 @@
         </div>
         <p class="box">
         <label for="street">Ulica:</label>
-        <input type="text" id="street" name="street" required />
+        <input type="text" id="street" name="street" 
+        pattern="^[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]{2,}(-[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśź]{2,})?$" required />
+        </p>
+        <p class="box">
+        <label for="street">Numer ulicy:</label>
+        <input type="text" pattern="^[1-9]{1,}(/[1-9]{1,})?$" id="streetno" name="streetno" required />
         </p>
         <p class="box">
         <label for="e-mail">e-mail:</label>
@@ -42,6 +51,10 @@
         <p class="box">
         <label for="password">Hasło:</label>
         <input type="password" id="password" name="password" required />
+        </p>
+        <p class="box">
+        <label for="password">Powtórz hasło:</label>
+        <input type="password" id="password2" name="password" required />
         </p>
         <p class="box">
         <label for="date">Data urodzenia:</label>
@@ -54,6 +67,7 @@
         <p class="box">
         <label for="voievoidship">Województwo:</label>
         <select name="wojewdztwo" required>
+                    <option value="" selected>-</option>
                     <option value="dolnoslaskie">Dolnośląskie</option>
                     <option value="kujawsko-pomorskie">Kujawsko-pomorskie</option>
                     <option value="lubelskie">Lubelskie</option>
@@ -72,15 +86,19 @@
                     <option value="zachodniopomorskie">Zachodniopomorskie</option>
                 </select>
         </p>
-        <p class="box">
-        <label for="dlicence">Prawo jazdy:</label>
-        <input type="number" id="dlicence" name="dlicence" required />
-        </p>
+        <div class="box">
+            <span>Prawo jazdy:</span>
+            <div class="radio-">
+                <label><input type="radio" name="prawo" value="tak" required> Tak</label>
+                <label><input type="radio" name="prawo" value="nie" required> Nie</label>
+            </div>
+        </div>
         <p class="box">
         <label for="notes">Uwagi:</label>
         <input type="text" id="notes" name="notes" />
         </p>
-        <p class="box">
+        </div>
+        <p class="submity">
         <input type="submit" value="Wyślij"> 
         </p>
         </form>

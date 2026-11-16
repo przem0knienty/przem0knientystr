@@ -1,3 +1,6 @@
+body {
+  background: darkolivegreen;
+}
 .centruj {
     text-align: center;
 }
@@ -8,17 +11,17 @@
 }
 .ramka{
     display: inline-block;
-    border: 2px solid greenyellow;
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
-    color: rgb(0, 255, 200);
+    color: rgb(0, 0, 0);
     border-radius: 4px;
     font-weight: bold;
     font-style: italic;    
+    background: white;
 }
 .ramka:hover{
-    background-color: cadetblue;
+    background: yellow;
     transform: scale(1.5);
 }
 .fleks{
@@ -53,6 +56,8 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 18px;
+
+  
 }
 
 .strona {
@@ -60,9 +65,32 @@
   margin: 30px auto;
   padding: 35px 40px;
   border-radius: 5px;
+  
 }
 .radio { 
     display: flex;
     flex-wrap: wrap; 
     gap: 20px; 
+}
+.submity{
+    width: 100%;
+    padding: 12px;
+    background: #6366f1;
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+input[type="submit"]{
+    font-family: 'Dancing Script',cursive;
+    width:20%;
+}
+.formula{
+    background: #6366f1;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: antiquewhite;
+    font-family: 'Dancing Script',cursive;
+    
 }
