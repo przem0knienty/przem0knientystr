@@ -106,17 +106,13 @@
         </nav>
         
         <script>
-        // Cały kod odpowiedzialny za zapis zajmuje tylko tyle:
         document.getElementById('formi').addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // Sprawdzenie haseł
             if (document.getElementById('password').value !== document.getElementById('password2').value)
             {
                 alert("Hasła muszą być takie same")
                 return;
             } 
-            // Automatyczne zapisanie każdego pola w pamięci przeglądarki
             const formData = new FormData(this);
             for (let [name, wartosc] of formData.entries()) {
                 localStorage.setItem(name, wartosc);
